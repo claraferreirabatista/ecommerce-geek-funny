@@ -1,0 +1,71 @@
+import React, { useState, useEffect } from "react";
+
+function Cart({ items, onRemoveItem }) {
+  const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item, index) => (
+          <tr key={index}>
+            <td>{item.name}</td>
+            <td>{item.quantity}</td>
+            <td>{item.price}</td>
+            <td>
+              <button onClick={() => onRemoveItem(item.name)}>Remover</button>
+            </td>
+          </tr>
+        ))}
+        <tr>
+          <td colSpan={2}>Total:</td>
+          <td colSpan={2}>{total}</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
+
+function MyComponent() {
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    setCart(storedCart);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  const handleAddToCart = (item) => {
+    const existingItem = cart.find((i) => i.name === item.name);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      setCart([...cart, { ...item, quantity: 1 }]);
+    }
+  };
+
+  const handleRemoveItem = (name) => {
+    setCart(cart.filter((item) => item.name !== name));
+  };
+
+  return (
+    <div>
+      <button onClick={() => handleAddToCart({ name: "item", price: 10 })}>
+        Adicionar ao Carrinho
+      </button>
+      <Cart items={cart} onRemoveItem={handleRemoveItem} />
+    </div>
+  );
+}
+
+export default MyComponent;
