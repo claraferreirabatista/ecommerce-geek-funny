@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-import{ StyleNav, StyleList, StyleLine } from "../UI/index"
-const StyledLink = styled(Link)`
+import{ StyleNav, StyleList, StyleLine } from "./StyleNavBar"
+
+export const StyledLink = styled(Link)`
 color: #F1F1F1`
 
 

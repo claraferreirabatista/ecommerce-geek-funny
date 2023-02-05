@@ -1,9 +1,17 @@
+import styled from "styled-components"
+import ShoppingCart from "../../ShoppingCart/ShoppingCart"
 
 
-const Cart =({cart})=>{
+export const Body= styled.div`
+  min-height: 81.5vh;
+
+`
+
+const Cart =()=>{
   return(
-    <div>
-<h1>oi</h1>
-   </div> )
+<Body>
+<ShoppingCart/>
+</Body>
+)
 }
 export default Cart

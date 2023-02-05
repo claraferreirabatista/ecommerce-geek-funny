@@ -1,11 +1,12 @@
 import ProductCard from "../../ProductCard/ProductCard"
+import SearchBar from "../../Search/Search"
 
 
 const Home = () => {
   
   return (
     <div>
-      <h1>Home</h1>
+      <SearchBar/>
       <ProductCard/>
     </div>
   )

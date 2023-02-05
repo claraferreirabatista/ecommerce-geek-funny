@@ -1,32 +1,47 @@
-const ShoppingCart = ({ items }) => {
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
+import React from "react";
+import { TableContainer, Table, THead, TBody, TFoot, TH, TD, Total } from "./StyledShoppingCart";
+
+const ShoppingCart = () => {
+  const { cart, addToCart, removeFromCart } = useContext(CartContext);
   let totalPrice = 0;
-  items.forEach((item) => {
-    totalPrice += item.price;
-  });
 
   return (
-    <table>
-      <thead>
+    <TableContainer>
+    <Table>
+      <THead>
         <tr>
-          <th>Nome</th>
-          <th>Preço</th>
+          <TH>Nome</TH>
+          <TH>Preço</TH>
+          <TH>Quantidade</TH>
+          <TH>Ações</TH>
         </tr>
-      </thead>
-      <tbody>
-        {items.map((item, index) => (
-          <tr key={index}>
-            <td>{item.name}</td>
-            <td>{item.price}</td>
-          </tr>
-        ))}
-      </tbody>
-      <tfoot>
+      </THead>
+      <TBody>
+        {cart.map((item, index) => {
+          totalPrice += item.price * item.quantity;
+          return (
+            <tr key={index}>
+              <TD>{item.name}</TD>
+              <TD>{item.price}</TD>
+              <TD>{item.quantity}</TD>
+              <TD>
+                <button onClick={() => addToCart(item)}>+</button>
+                <button onClick={() => removeFromCart(item)}>-</button>
+              </TD>
+            </tr>
+          );
+        })}
+      </TBody>
+      <TFoot>
         <tr>
-          <td>Total de itens: {items.length}</td>
-          <td>Total: `R$ ${totalPrice.toFixed(2)}`</td>
+          <TD>Total de itens: {cart.length}</TD>
+          <Total>Total: R$ {totalPrice.toFixed(2)}</Total>
         </tr>
-      </tfoot>
-    </table>
-  );
+      </TFoot>
+    </Table>
+  </TableContainer>
+);
 };
 export default ShoppingCart;
