@@ -8,7 +8,7 @@ const BaseBoard = () => {
     <FooterConteiner>
       <Icons>
         <Link
-          to="https://github.com/xxxcorncake"
+          to="https://github.com/claraferreirabatista"
           target="_blank"
           rel="noopener noreferrer">
           <FaGithub size={32} color="#F1F1F1 " />
