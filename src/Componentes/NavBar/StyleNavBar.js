@@ -17,6 +17,8 @@ export const StyleLine = styled.li`
 margin-right: 1em;
 color: #F1F1F1;
 `
+export const Banner = styled.img`
+`
 
 
 

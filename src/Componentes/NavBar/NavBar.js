@@ -8,7 +8,8 @@ color: #F1F1F1`
 
 const NavBar = () => {
   return (
-    <StyleNav>
+<>
+<StyleNav>
       <StyleList>
         <StyleLine>
           <StyledLink to="/">Home</StyledLink>
@@ -18,6 +19,8 @@ const NavBar = () => {
         </StyleLine>
       </StyleList>
       </StyleNav>
+      <img src= "/Imagens/Banner.png" alt="Banner Divertido da Loja"/>
+      </>
   )
 }
 export default NavBar

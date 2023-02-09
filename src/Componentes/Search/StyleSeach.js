@@ -20,8 +20,14 @@ export const SearchButton = styled.button`
   width: 20%;
   border-radius: 75px;
   border: none;
-  background-color: lightblue;
+  background-color:#7A02FC;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  &:hover {
+    border: 2px bold #000000;
+    background-color: #7761E2;
+  }
+
+
 `;

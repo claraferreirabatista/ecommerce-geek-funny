@@ -16,7 +16,7 @@ const Table = styled.table`
 `;
 
 const THead = styled.thead`
-  background-color: #333;
+  background-color: #5656F0;
   color: white;
 `;
 
@@ -25,7 +25,7 @@ const TBody = styled.tbody`
 `;
 
 const TFoot = styled.tfoot`
-  background-color: #333;
+  background-color:#5656F0;
   color: white;
 `;
 
@@ -41,6 +41,7 @@ const TD = styled.td`
 `;
 
 const Total = styled.td`
+ padding: 10px;
   font-weight: bold;
 `;
 

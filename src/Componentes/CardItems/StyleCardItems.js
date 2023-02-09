@@ -33,7 +33,7 @@ export const PriceCard = styled.p`
 text-align: center;
 `
 export const CardButton = styled.button`
-background-color: #5f9ea0;
+background-color: #7A02FC;
 color: #ffffff;
 padding: 8px 16px;
 border-radius: 5px;
@@ -45,7 +45,7 @@ font-size: 14px;
 
   &:hover {
     border: 2px bold #000000;
-    background-color: #3f7d90;
+    background-color: #7761E2;
   }
 
 `;
