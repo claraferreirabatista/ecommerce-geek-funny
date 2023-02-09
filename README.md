@@ -13,4 +13,4 @@ Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar
 - React-Router
 - localStorage
 
-Para acessar: 
+Para acessar: https://geek-funny.vercel.app/
