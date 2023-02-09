@@ -8,6 +8,8 @@ import SearchBar from "../../../src/Componentes/Search/Search"
 const ProductCard = () => {
   const { cart, setCart } = useContext(CartContext);
   const [sortOrder, setSortOrder] = useState("asc");
+  const [searchQuery, setSearchQuery] = useState('');
+  const lowerSearch = searchQuery.toLowerCase()
 
   const handleChange = event => {
     setSortOrder(event.target.value);
@@ -30,7 +32,8 @@ const ProductCard = () => {
   return (
     <>
       <StyleBox>
-        <SearchBar />
+        <SearchBar searchQuery={searchQuery} setSearchQuery={(event) =>
+    setSearchQuery(event.target.value)}/>
         <StyledSelect  value={sortOrder} onChange={handleChange}>
         <option value="asc">Menor preço para maior</option>
         <option value="desc">Maior preço para menor</option>
@@ -43,6 +46,7 @@ const ProductCard = () => {
               ? a.price - b.price
               : b.price - a.price
           )
+          .filter((p)=> p.name.toLowerCase().includes(lowerSearch))
           .map((product) => {
             return (
               <CardItems
