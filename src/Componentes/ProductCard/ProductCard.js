@@ -9,7 +9,7 @@ import styled from "styled-components";
 import Filters from "../Filter/Filter";
 
 export const StyledLink = styled(Link)`
-color: #F1F1F1`
+color: #F1F1F1;`
 
 const ProductCard = () => {
   const { cart, setCart } = useContext(CartContext);

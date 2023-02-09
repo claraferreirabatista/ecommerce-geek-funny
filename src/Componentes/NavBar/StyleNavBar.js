@@ -1,4 +1,7 @@
 import styled from "styled-components";
+const px2vw = (size, width = 1440) => `${(size / width) * 100}vw`;
+
+export default px2vw;
 
 export const StyleNav = styled.nav`
 display: flex;
@@ -18,6 +21,7 @@ margin-right: 1em;
 color: #F1F1F1;
 `
 export const Banner = styled.img`
+width: 100vw
 `
 
 
