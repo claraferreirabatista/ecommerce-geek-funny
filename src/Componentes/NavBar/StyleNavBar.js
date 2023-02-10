@@ -21,7 +21,7 @@ margin-right: 1em;
 color: #F1F1F1;
 `
 export const Banner = styled.img`
-width: 100vw
+width: 100%
 `
 
 
