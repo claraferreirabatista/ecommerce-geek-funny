@@ -6,6 +6,7 @@ import { TableContainer, Table, THead, TBody, TFoot, TH, TD, Total } from "./Sty
 const ShoppingCart = () => {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
   let totalPrice = 0;
+  let totalItem = 0;
 
   return (
     <TableContainer>
@@ -21,6 +22,7 @@ const ShoppingCart = () => {
       <TBody>
         {cart.map((item, index) => {
           totalPrice += item.price * item.quantity;
+          totalItem += item.quantity;
           return (
             <tr key={index}>
               <TD>{item.name}</TD>
@@ -36,7 +38,7 @@ const ShoppingCart = () => {
       </TBody>
       <TFoot>
         <tr>
-          <TD>Total de itens: {cart.length * item.quantity}</TD>
+          <TD>Total de itens:{totalItem}</TD>
           <Total>Total: R$ {totalPrice.toFixed(2)}</Total>
         </tr>
       </TFoot>
