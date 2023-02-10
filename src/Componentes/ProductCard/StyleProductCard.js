@@ -40,7 +40,4 @@ font-size: 14px;
 &:hover {
     border: 2px bold #000000;
     background-color: #7761E2;
-  }
-
-
-`
+  }`

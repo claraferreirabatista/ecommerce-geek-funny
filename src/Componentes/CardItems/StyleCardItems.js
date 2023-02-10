@@ -28,12 +28,16 @@ row-gap: 1em;
 
 export const NameCard = styled.h2`
 text-align: center;
+color: #301e4e;
+text-decoration: 0.2rem solid underline #ff6e6c;
+text-underline-offset: 0.5rem;
 `
-export const PriceCard = styled.p`
+export const PriceCard = styled.h1`
 text-align: center;
+
 `
 export const CardButton = styled.button`
-background-color: #7A02FC;
+background-color: #301E4E;
 color: #ffffff;
 padding: 8px 16px;
 border-radius: 5px;

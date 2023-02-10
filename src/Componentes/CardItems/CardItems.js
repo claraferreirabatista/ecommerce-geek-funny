@@ -7,7 +7,7 @@ const CardItems = ({ name, image, price, addToCart }) => {
       <ImageCard src={image} />
       <InfoCard>
         <NameCard>{name}</NameCard>
-        <PriceCard>Preço: R${price}</PriceCard>
+        <PriceCard>R${price}</PriceCard>
       </InfoCard>
       <CardButton onClick={addToCart} >Adcionar no carrinho</CardButton>
     </CardConteiner>

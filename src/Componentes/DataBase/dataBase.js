@@ -45,6 +45,12 @@ const products = [
     name: "Planets",
     image: "/Imagens/CamisaDivertida8.png",
     price: 45.99
+  },
+  {
+    id: 9,
+    name: "Final Spece",
+    image: "/Imagens/CamisaDivertida9.jpg",
+    price: 199.99
   }
 ]
 export default products

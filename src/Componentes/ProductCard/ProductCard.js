@@ -1,4 +1,4 @@
-import { StyledCard, StyleBox, StyledSelect, HomeButton } from "./StyleProductCard";
+import { StyledCard, StyleBox, StyledSelect, HomeButton} from "./StyleProductCard";
 import products from "../../../src/Componentes/DataBase/dataBase";
 import CardItems from "../../../src/Componentes/CardItems/CardItems";
 import { useContext, useState } from "react";
@@ -74,7 +74,7 @@ const ProductCard = () => {
             );
           })}
       </StyledCard>
-      <HomeButton><StyledLink to="/Cart">Ir para carrinho</StyledLink></HomeButton>
+      <HomeButton><StyledLink to="/Cart">Ir para carrinho</StyledLink></HomeButton>      
     </>
   );
 };

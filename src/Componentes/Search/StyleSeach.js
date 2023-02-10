@@ -20,7 +20,7 @@ export const SearchButton = styled.button`
   width: 20%;
   border-radius: 75px;
   border: none;
-  background-color:#7A02FC;
+  background-color:#301E4E;
   color: white;
   font-size: 16px;
   cursor: pointer;
