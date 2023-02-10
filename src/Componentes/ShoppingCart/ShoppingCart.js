@@ -38,7 +38,7 @@ const ShoppingCart = () => {
       </TBody>
       <TFoot>
         <tr>
-          <TD>Total de itens:{totalItem}</TD>
+          <TD>Total de itens:{totalItem*cart}</TD>
           <Total>Total: R$ {totalPrice.toFixed(2)}</Total>
         </tr>
       </TFoot>
