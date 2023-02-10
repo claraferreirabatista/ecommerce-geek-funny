@@ -22,7 +22,7 @@ const ShoppingCart = () => {
       <TBody>
         {cart.map((item, index) => {
           totalPrice += item.price * item.quantity;
-          totalItem += item.quantity * item;
+          totalItem += item.quantity;
           return (
             <tr key={index}>
               <TD>{item.name}</TD>
